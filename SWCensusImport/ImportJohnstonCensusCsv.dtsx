@@ -1,0 +1,1443 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/5/2015 12:50:09 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="USER-PC"
+  DTS:CreatorName="user-PC\user"
+  DTS:DTSID="{0A8E09BB-1098-42E7-9F6F-2A7CD3B7CD18}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ImportJohnstonCensusCsv"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{0882A954-9521-417E-835D-D29E5124625C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat Johnston Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{99A40C75-6491-49B1-ACA4-27EFC4E0E65E}"
+      DTS:ObjectName="Flat Johnston Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::strFileNameFull]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="temp_111220131415.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hosp Acct"
+              DTS:DTSID="{D5C6CD66-9675-4EE5-A833-A13DE6EB5F00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit"
+              DTS:DTSID="{2CB3C1DB-7A2E-4528-ADFF-4BF3D5128EE5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Admission Date"
+              DTS:DTSID="{00B5905B-71D0-4E68-9F51-4A07168CE925}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Admission Time"
+              DTS:DTSID="{FA03D4EC-9FC2-4064-9F37-0429BA05FE4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Patient Class"
+              DTS:DTSID="{CD790C70-9103-4A75-8113-8D40A98B7BD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateNow"
+              DTS:DTSID="{671640B2-6D9A-4127-96E2-8546FA3D3D0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeNow"
+              DTS:DTSID="{160F2941-33B9-4B6D-BD30-740FA7816274}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Johnston Connection Manager wReport Date]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CE054EE9-80D8-4D00-9CB2-10FB5C8E9F1A}"
+      DTS:ObjectName="Johnston Connection Manager wReport Date">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::strFileNameFull]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="temp_111220131415.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hosp Acct"
+              DTS:DTSID="{5F133D04-1F02-4459-BCCC-3DE3D5FE0C63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit"
+              DTS:DTSID="{7A8ABC6D-D0C6-43A9-9118-3013617194F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Admission Date"
+              DTS:DTSID="{2699025B-6803-4E56-85CF-1FA0CC1A5A01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Admission Time"
+              DTS:DTSID="{EBCCB20C-35AC-45B9-8DB7-1C138CBEF780}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Patient Class"
+              DTS:DTSID="{6958C366-AF79-4139-850D-C48ED06DD328}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateNow"
+              DTS:DTSID="{BCC6E6B9-B866-493E-912F-C367A018EE44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeNow"
+              DTS:DTSID="{32A6595F-C297-4170-8E83-EB583C0EC6E3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{62682F7A-AF40-4F97-BC15-DE33DFFA9B8C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="LEFT(RIGHT(@[User::strFileNameFull], 16 ),2)+&quot;/&quot;+LEFT(RIGHT(@[User::strFileNameFull], 14 ),2)+&quot;/&quot;+LEFT(RIGHT(@[User::strFileNameFull], 12 ),4)+&quot; &quot;+LEFT(RIGHT(@[User::strFileNameFull], 8 ),2)+&quot;:&quot;+LEFT(RIGHT(@[User::strFileNameFull], 6 ),2)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="strFileDateTime">
+      <DTS:VariableValue
+        DTS:DataType="8">11/12/2013 14:15</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9DAAA433-344B-463E-B234-66074495FA43}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="strFileNameFull">
+      <DTS:VariableValue
+        DTS:DataType="8">temp_111220131415.txt</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{515E636D-DBEC-4AA4-A9A2-EE87B4A61D52}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="DTS.ForEachFileEnumerator.3"
+        DTS:DTSID="{E4B4A29E-BB9D-4E9E-BE91-ED4DBDA362D3}"
+        DTS:ObjectName="{E4B4A29E-BB9D-4E9E-BE91-ED4DBDA362D3}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[$Project::strDataFolder]</DTS:PropertyExpression>
+        <DTS:PropertyExpression
+          DTS:Name="FileSpec">@[$Project::strFileNamePattern]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="\\swftp01\customerfiles\Johnston" />
+            <FEFEProperty
+              FileSpec="Johnston_Census_*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Archive Patient File"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="File System Task"
+          DTS:DTSID="{B8485CAD-F0C3-46B0-98E8-DB30A6ECD263}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Archive Patient File"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::strFileNameFull"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="$Project::strArchiveFolder"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Load Patients File"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{BB5E0DC2-C37B-41AA-B46E-81BF349555B1}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Patients File"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Load Patients File\Derived Column"
+                  componentClassID="DTSTransform.DerivedColumn.3"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input].Columns[Admission Date]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Admission Date"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input].Columns[Admission Time]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Admission Time"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Time]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input].Columns[DateNow]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="DateNow"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[DateNow]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input].Columns[TimeNow]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="TimeNow"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[TimeNow]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[fileDT]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[fileDT]"
+                          name="fileDT"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[ReportDate]"
+                          dataType="date"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[ReportDate]"
+                          name="ReportDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_DATE)((DT_STR,30,1252)((DT_DBDATE)#{Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[DateNow]}) + " " + #{Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[TimeNow]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_DATE)((DT_STR,30,1252)((DT_DBDATE)DateNow) + " " + TimeNow)</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[AdmissionDate]"
+                          dataType="date"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[AdmissionDate]"
+                          name="AdmissionDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_DATE)((DT_STR,30,1252)((DT_DBDATE)#{Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Date]}) + " " + #{Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Time]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_DATE)((DT_STR,30,1252)((DT_DBDATE)[Admission Date]) + " " + [Admission Time])</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load Patients File\Flat File Source"
+                  componentClassID="DTSAdapter.FlatFileSource.3"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat Johnston Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat Johnston Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Hosp Acct]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Hosp Acct]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Hosp Acct]"
+                          name="Hosp Acct"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Unit]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Unit]"
+                          name="Unit"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Admission Date]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Date]"
+                          name="Admission Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Time]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Admission Time]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Admission Time]"
+                          name="Admission Time"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Patient Class]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient Class]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Patient Class]"
+                          name="Patient Class"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[DateNow]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateNow]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[DateNow]"
+                          name="DateNow"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[TimeNow]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TimeNow]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[TimeNow]"
+                          name="TimeNow"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Hosp Acct]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Hosp Acct" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Unit" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Admission Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Admission Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Admission Time]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Admission Time" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Patient Class]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Patient Class" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateNow]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="DateNow" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TimeNow]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="TimeNow" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load Patients File\Lookup"
+                  componentClassID="DTSTransform.Lookup.3"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Station]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Station]) [refTable]
+where [refTable].[StationCode] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="StationId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FacilityId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DepartmentUnitId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationDescription" dataType="DT_WSTR" length="1000" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationCode" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationRecStat" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Unit]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load Patients File\Lookup.Connections[OleDbConnection]"
+                      connectionManagerID="{B720B6C9-9F66-47AE-B183-D0CFDE9B9F3A}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[SWdatabase]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load Patients File\Lookup.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Lookup.Inputs[Lookup Input].Columns[Unit]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Unit"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Unit]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">StationCode</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Patients File\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output].Columns[StationId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output].Columns[StationId]"
+                          name="StationId"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">StationId</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output].Columns[DepartmentUnitId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output].Columns[DepartmentUnitId]"
+                          name="DepartmentUnitId"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">DepartmentUnitId</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Patients File\Lookup.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Patients File\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination"
+                  componentClassID="DTSAdapter.OLEDBDestination.3"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[IntPatients]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{B720B6C9-9F66-47AE-B183-D0CFDE9B9F3A}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[SWdatabase]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Unit]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Unit"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationCode]"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Unit]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Hosp Acct]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Hosp Acct"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VisitID_hashed]"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Hosp Acct]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DepartmentUnitId]"
+                          cachedDataType="i4"
+                          cachedName="DepartmentUnitId"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DepartmentUnitId]"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output].Columns[DepartmentUnitId]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StationId]"
+                          cachedDataType="i4"
+                          cachedName="StationId"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationID]"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output].Columns[StationId]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AdmissionDate]"
+                          cachedDataType="date"
+                          cachedName="AdmissionDate"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartDT]"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[AdmissionDate]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ReportDate]"
+                          cachedDataType="date"
+                          cachedName="ReportDate"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportDT]"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output].Columns[ReportDate]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Patient Class]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Patient Class"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PatientType]"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output].Columns[Patient Class]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PatientType]"
+                          dataType="wstr"
+                          length="50"
+                          name="PatientType" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Acuity]"
+                          dataType="wstr"
+                          length="50"
+                          name="Acuity" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VisitID_hashed]"
+                          dataType="bytes"
+                          length="8000"
+                          name="VisitID_hashed" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartDT]"
+                          dataType="dbTimeStamp"
+                          name="StartDT" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndDT]"
+                          dataType="dbTimeStamp"
+                          name="EndDT" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportDT]"
+                          dataType="dbTimeStamp"
+                          name="ReportDT" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IntPatientsID]"
+                          dataType="i4"
+                          name="IntPatientsID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DepartmentUnitId]"
+                          dataType="i4"
+                          name="DepartmentUnitId" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationCode]"
+                          dataType="wstr"
+                          length="50"
+                          name="StationCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationID]"
+                          dataType="i4"
+                          name="StationID" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Load Patients File.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container\Load Patients File\Lookup.Inputs[Lookup Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Load Patients File\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Load Patients File.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Load Patients File\Derived Column.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Load Patients File\Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Load Patients File.Paths[Lookup Match Output]"
+                  endId="Package\Foreach Loop Container\Load Patients File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach Loop Container\Load Patients File\Lookup.Outputs[Lookup Match Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Merge Into IntPatients"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{61AA96AA-9A83-4325-917A-7026FB57F955}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Merge Into IntPatients"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{B720B6C9-9F66-47AE-B183-D0CFDE9B9F3A}"
+              SQLTask:SqlStatementSource="UPDATE IntPatients SET PatientType = 'IN' WHERE PatientType IN ('A','I','N','Y');&#xA;&#xA;UPDATE IntPatients SET PatientType = 'OP' WHERE PatientType IN ('B','O','S','X');&#xA;&#xA;UPDATE IntPatients SET PatientType = 'ER' WHERE PatientType = 'E';&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{4A2A4D31-1775-4403-806B-7EE255E1D5E0}"
+          DTS:From="Package\Foreach Loop Container\Load Patients File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Foreach Loop Container\Archive Patient File" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{22F56342-1FAA-4F60-85A1-86E3AB705952}"
+          DTS:From="Package\Foreach Loop Container\Archive Patient File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Foreach Loop Container\Merge Into IntPatients" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{D27A0B11-86B4-4A5C-A3C7-31474220AB9D}"
+          DTS:ObjectName="{D27A0B11-86B4-4A5C-A3C7-31474220AB9D}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::strFileNameFull" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update PatVolLog"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C4315CB2-BC3D-4D87-A43D-AC7232E33DB7}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update PatVolLog"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B720B6C9-9F66-47AE-B183-D0CFDE9B9F3A}"
+          SQLTask:SqlStatementSource="DECLARE @StartDate as datetime&#xA;DECLARE @EndDate as datetime&#xA;SET @StartDate = DATEADD(day, -3, getdate())&#xA;SELECT @EndDate = max(ReportDT) from IntPatients&#xA;exec ImportPatientsToPatVolLog @StartDate, @EndDate&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5322B5C6-D87C-4E31-8C54-00559F1EFFCD}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Update PatVolLog" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Foreach Loop Container\Archive Patient File"
+          TopLeft="45.48571595951,84.8000020419851" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Foreach Loop Container\Load Patients File"
+          TopLeft="14.1714339626079,5.50588388871989" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Foreach Loop Container\Merge Into IntPatients"
+          TopLeft="212.285718854592,13.5176479103656" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="95.7714339626079,47.1058838887199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.91428199690216,37.6941181532652"
+              Start="0,0"
+              End="8.91428199690216,30.1941181532652">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.4099277787906" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.4099277787906"
+                    Point2="0,22.4099277787906"
+                    Point3="4,22.4099277787906" />
+                  <mssgle:LineSegment
+                    End="4.91428199690216,22.4099277787906" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.91428199690216,22.4099277787906"
+                    Point2="8.91428199690216,22.4099277787906"
+                    Point3="8.91428199690216,26.4099277787906" />
+                  <mssgle:LineSegment
+                    End="8.91428199690216,30.1941181532652" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="159.88571595951,84.8000020419851">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="146.000002895082,-29.6823541316195"
+              Start="0,0"
+              End="146.000002895082,-22.1823541316195">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-8.03558468898545" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-8.03558468898545"
+                    Point2="0,-12.0355846889854"
+                    Point3="4,-12.0355846889854" />
+                  <mssgle:LineSegment
+                    End="142.000002895082,-12.0355846889854" />
+                  <mssgle:CubicBezierSegment
+                    Point1="142.000002895082,-12.0355846889854"
+                    Point2="146.000002895082,-12.0355846889854"
+                    Point3="146.000002895082,-16.0355846889854" />
+                  <mssgle:LineSegment
+                    End="146.000002895082,-22.1823541316195" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="468,216"
+          Size="468,259.2"
+          Id="Package\Foreach Loop Container"
+          TopLeft="67.8571440127431,289.076469550083" />
+        <NodeLayout
+          Size="163.2,44"
+          Id="Package\Update PatVolLog"
+          TopLeft="575.714295518642,362.364709211303" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="535.857144012743,418.676469550083">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.8571515058989,-34.3117603387804"
+              Start="0,0"
+              End="32.3571515058989,-34.3117603387804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="15.9285757529494,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.9285757529494,0"
+                    Point2="19.9285757529494,0"
+                    Point3="19.9285757529494,-4" />
+                  <mssgle:LineSegment
+                    End="19.9285757529494,-30.3117603387804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.9285757529494,-30.3117603387804"
+                    Point2="19.9285757529494,-34.3117603387804"
+                    Point3="23.9285757529494,-34.3117603387804" />
+                  <mssgle:LineSegment
+                    End="32.3571515058989,-34.3117603387804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Load Patients File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Foreach Loop Container\Load Patients File\Lookup"
+          TopLeft="681,94" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Foreach Loop Container\Load Patients File\Derived Column"
+          TopLeft="310.571433826369,41.4470595871289" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Foreach Loop Container\Load Patients File\OLE DB Destination"
+          TopLeft="292.57143355389,128.470590037046" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Foreach Loop Container\Load Patients File\Flat File Source"
+          TopLeft="92.0000015667507,39.7647064400379" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load Patients File.Paths[Lookup Match Output]"
+          TopLeft="681,120.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-217.42856644611,28.8039233703794"
+              Start="0,0"
+              End="-209.92856644611,28.8039233703794">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-87.7588445552391,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-87.7588445552391,0"
+                    Point2="-91.7588445552391,0"
+                    Point3="-91.7588445552391,4" />
+                  <mssgle:LineSegment
+                    End="-91.7588445552391,24.8039233703794" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-91.7588445552391,24.8039233703794"
+                    Point2="-91.7588445552391,28.8039233703794"
+                    Point3="-95.7588445552391,28.8039233703794" />
+                  <mssgle:LineSegment
+                    End="-209.92856644611,28.8039233703794" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-139.950231273989,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load Patients File.Paths[Flat File Source Output]"
+          TopLeft="244.000001566751,61.6058830135834">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.5714322596183,0"
+              Start="0,0"
+              End="59.0714322596183,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="59.0714322596183,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load Patients File.Paths[Derived Column Output]"
+          TopLeft="465.571433826369,62.4470595871289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="215.428566173631,52.5529404128711"
+              Start="0,0"
+              End="207.928566173631,52.5529404128711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="103.714283086815,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="103.714283086815,0"
+                    Point2="107.714283086815,0"
+                    Point3="107.714283086815,4" />
+                  <mssgle:LineSegment
+                    End="107.714283086815,48.5529404128711" />
+                  <mssgle:CubicBezierSegment
+                    Point1="107.714283086815,48.5529404128711"
+                    Point2="107.714283086815,52.5529404128711"
+                    Point3="111.714283086815,52.5529404128711" />
+                  <mssgle:LineSegment
+                    End="207.928566173631,52.5529404128711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Load Patients File\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Station]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Load Patients File\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
