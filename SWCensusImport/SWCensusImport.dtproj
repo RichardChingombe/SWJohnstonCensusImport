@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">USER-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="gUE+/bK9Fg==" SSIS:IV="BBml+HnouRk=">ZmhFJkt1KGWAT4L1zuVPwm4KLn47Kseyvp7CdFKczq/Ej9HUSMXs1ppxqmXrJovCqNCWpckP/xssZyBpwufNgmr2adPa7vc/OsiEBunTdd0s8gUNM6b+ltVp4TPOWocKWkwQM8kKA379OviQ5QlVA65gXuy4PfCJOQAf/NWiTCLItid/AEyFCg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="EpyFpHLzcA==" SSIS:IV="nySD1RDTrxE=">hAqXnKdN5lA3N2c27DUV6OdGhI7Ga90BsumgZ9QDkhtEkBPEUtqLo06VSqongTd4Q1CrycrMtXswOhblrkHAkCp9CIsOTh+Tl0WhwpT/xGH51RcyEJYW2txj44Wwq8fY63VBkMEGSNixYvlAZV75hZPmTvC7IKP3GhMvCtzuJSmNWkCfkzan9g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -99,14 +99,14 @@
           <SSIS:PackageInfo>
             <SSIS:PackageMetaData SSIS:Name="ImportJohnstonCensusCsv.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{0A8E09BB-1098-42E7-9F6F-2A7CD3B7CD18}</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{CBAA9A84-448F-4FF8-864D-22955889DE24}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">ImportJohnstonCensusCsv</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">65</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">68</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{CC2338A3-B032-400C-904C-179025F4579E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5FF9BA6D-50C4-4FB6-93B8-F8045B763938}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -245,6 +245,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
